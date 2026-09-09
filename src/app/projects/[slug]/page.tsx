@@ -5,7 +5,7 @@ import { ArrowLeft, Code, ExternalLink, Github, Terminal } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getIcon } from "@/lib/icons";
-import Image from "next/image";
+import { WebsiteThumbnail } from "@/components/ui/WebsiteThumbnail";
 
 export async function generateStaticParams() {
   return projects.map((project) => ({
@@ -46,16 +46,13 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
               })}
             </div>
             
-            <div className="aspect-video w-full relative rounded-3xl mb-12 overflow-hidden border border-border shadow-2xl">
-              <Image 
-                src={project.image} 
-                alt={project.title}
-                fill
-                className="object-cover"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent" />
-            </div>
+            <WebsiteThumbnail
+              url={project.liveUrl}
+              title={project.title}
+              fallbackSrc={project.image}
+              className="aspect-video w-full rounded-3xl mb-12 border border-border shadow-2xl"
+              priority
+            />
 
             <div className="prose prose-lg dark:prose-invert max-w-none space-y-8">
               <section>

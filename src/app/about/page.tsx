@@ -3,6 +3,8 @@ import { Card, CardContent } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { Download, ExternalLink, Mail, Server, BarChart3, ShieldCheck, Globe } from "lucide-react";
 import Link from "next/link";
+import { WebsiteThumbnail } from "@/components/ui/WebsiteThumbnail";
+import { projects } from "@/lib/data";
 
 export default function AboutPage() {
   return (
@@ -97,18 +99,42 @@ export default function AboutPage() {
               </ul>
             </Card>
 
-            <div className="p-8 rounded-3xl bg-primary text-primary-foreground">
-              <h3 className="text-xl font-bold mb-4">Website Kelolaan</h3>
-              <ul className="space-y-3 text-sm">
-                <li><a href="https://pacitankab.go.id" target="_blank" rel="noopener noreferrer" className="hover:underline flex items-center gap-2">pacitankab.go.id <ExternalLink size={14} /></a></li>
-                <li><a href="https://data.pacitankab.go.id" target="_blank" rel="noopener noreferrer" className="hover:underline flex items-center gap-2">data.pacitankab.go.id <ExternalLink size={14} /></a></li>
-                <li><a href="https://opendata.pacitankab.go.id" target="_blank" rel="noopener noreferrer" className="hover:underline flex items-center gap-2">opendata.pacitankab.go.id <ExternalLink size={14} /></a></li>
-                <li><a href="https://geoportal.pacitankab.go.id" target="_blank" rel="noopener noreferrer" className="hover:underline flex items-center gap-2">geoportal.pacitankab.go.id <ExternalLink size={14} /></a></li>
-                <li><a href="https://dataviz.pacitankab.go.id" target="_blank" rel="noopener noreferrer" className="hover:underline flex items-center gap-2">dataviz.pacitankab.go.id <ExternalLink size={14} /></a></li>
-              </ul>
+            <div className="p-6 md:p-8 rounded-3xl bg-primary text-primary-foreground">
+              <h3 className="text-xl font-bold mb-1">Website Kelolaan</h3>
+              <p className="text-primary-foreground/70 text-sm mb-6">5 portal strategis — live screenshot thumbnail</p>
+              
+              <div className="grid grid-cols-1 gap-4">
+                {projects.filter(p => p.liveUrl).slice(0,5).map((project) => (
+                  <a
+                    key={project.slug}
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group block rounded-2xl overflow-hidden bg-white/10 hover:bg-white/15 transition-colors border border-white/10"
+                  >
+                    <WebsiteThumbnail
+                      url={project.liveUrl!}
+                      title={project.title}
+                      fallbackSrc={project.image}
+                      className="aspect-video w-full"
+                    />
+                    <div className="p-3 flex items-center justify-between">
+                      <div>
+                        <p className="text-sm font-semibold leading-none">{project.title}</p>
+                        <p className="text-xs text-primary-foreground/70">{project.liveUrl?.replace('https://','')}</p>
+                      </div>
+                      <ExternalLink size={16} className="shrink-0 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" />
+                    </div>
+                  </a>
+                ))}
+              </div>
+
               <p className="text-primary-foreground/80 mt-6 text-sm">
                 Seluruh portal dikelola dengan infrastruktur virtualisasi Proxmox & container Docker di atas Linux Server.
               </p>
+              <Link href="/projects" className="inline-flex items-center gap-1 mt-3 text-sm font-semibold underline underline-offset-4 hover:text-white">
+                Lihat detail website <ExternalLink size={14} />
+              </Link>
             </div>
           </div>
         </div>

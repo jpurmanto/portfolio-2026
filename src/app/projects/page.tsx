@@ -5,8 +5,7 @@ import Link from "next/link";
 import { ChevronRight, Code, ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { getIcon } from "@/lib/icons";
-
-import Image from "next/image";
+import { WebsiteThumbnail } from "@/components/ui/WebsiteThumbnail";
 
 export default function ProjectsPage() {
   return (
@@ -20,16 +19,12 @@ export default function ProjectsPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
             <Card key={project.slug} className="flex flex-col h-full overflow-hidden group">
-              <div className="aspect-video w-full relative overflow-hidden">
-                
-                <Image 
-                  src={project.image} 
-                  alt={project.title}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </div>
+              <WebsiteThumbnail
+                url={project.liveUrl}
+                title={project.title}
+                fallbackSrc={project.image}
+                className="aspect-video w-full"
+              />
               <CardHeader>
                 <div className="flex flex-wrap gap-2 mb-3">
                   {project.tags.map(tag => {

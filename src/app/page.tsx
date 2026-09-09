@@ -1,11 +1,11 @@
 import Link from "next/link";
-import Image from "next/image";
 import { ArrowRight, ChevronRight, BarChart3, Globe, Layers, Server, ShieldCheck, Database } from "lucide-react";
 import { Section, SectionHeader } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/Card";
 import { projects, skills } from "@/lib/data";
 import { getIcon } from "@/lib/icons";
+import { WebsiteThumbnail } from "@/components/ui/WebsiteThumbnail";
 
 export default function Home() {
   const featuredProjects = projects.filter(p => p.featured);
@@ -57,15 +57,12 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {featuredProjects.map((project) => (
             <Card key={project.slug} className="flex flex-col overflow-hidden group">
-              <div className="aspect-video w-full relative overflow-hidden bg-accent/50 flex items-center justify-center">
-                <Image 
-                  src={project.image} 
-                  alt={project.title}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </div>
+              <WebsiteThumbnail
+                url={project.liveUrl}
+                title={project.title}
+                fallbackSrc={project.image}
+                className="aspect-video w-full"
+              />
               <CardHeader>
                 <CardTitle className="line-clamp-1">{project.title}</CardTitle>
                 <CardDescription className="line-clamp-2">{project.description}</CardDescription>
