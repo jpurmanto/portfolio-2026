@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio | System Engineer",
-  description: "A professional portfolio showcasing engineering skills, system design thinking, and real-world project experience.",
+  title: "Purwanto | System Engineer & Data Analyst - Pemkab Pacitan",
+  description: "System Engineer & Data Analyst di Pemkab Pacitan. Merancang, membangun, dan memelihara sistem IT serta mengelola dan mempublikasikan data Kabupaten Pacitan. Keahlian: Linux, Proxmox VE, Docker, Mikrotik, Fortigate. Pengelola pacitankab.go.id, data, opendata, geoportal, dataviz.",
 };
 
 export default function RootLayout({

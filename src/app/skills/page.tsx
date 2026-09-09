@@ -1,26 +1,26 @@
 import { Section, SectionHeader } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
 import { skills } from "@/lib/data";
-import { Brain, Code2, Cpu, Globe, Layout, Server, Sparkles } from "lucide-react";
+import { Brain, Code2, Cpu, Database, Globe, Layout, Server, ShieldCheck, BarChart3 } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { getIcon } from "@/lib/icons";
 
 export default function SkillsPage() {
   const categories = [
-    { name: 'Language', icon: Code2, color: 'text-blue-500' },
-    { name: 'Frontend', icon: Layout, color: 'text-pink-500' },
-    { name: 'Backend', icon: Server, color: 'text-green-500' },
-    { name: 'Database', icon: Cpu, color: 'text-orange-500' },
-    { name: 'DevOps', icon: Globe, color: 'text-purple-500' },
+    { name: 'Infrastructure', icon: Server, color: 'text-blue-500', label: 'Infrastructure' },
+    { name: 'Network', icon: ShieldCheck, color: 'text-emerald-500', label: 'Network & Security' },
+    { name: 'DevOps', icon: Globe, color: 'text-purple-500', label: 'DevOps' },
+    { name: 'Data', icon: BarChart3, color: 'text-orange-500', label: 'Data' },
+    { name: 'Database', icon: Database, color: 'text-pink-500', label: 'Database' },
   ];
 
   return (
     <div className="pb-20">
       <Section className="md:pt-16">
         <SectionHeader 
-          title="Technical Arsenal" 
-          subtitle="A comprehensive overview of my technical skills, tools, and methodologies collected over years of engineering."
+          title="Technical Expertise" 
+          subtitle="Keahlian yang digunakan sehari-hari untuk menjaga stabilitas sistem dan mengelola data di Pemkab Pacitan."
         />
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -35,7 +35,7 @@ export default function SkillsPage() {
                     <div className={`p-2 rounded-lg bg-accent ${cat.color}`}>
                       <cat.icon size={20} />
                     </div>
-                    <h2 className="text-xl font-bold">{cat.name} Expertise</h2>
+                    <h2 className="text-xl font-bold">{cat.label}</h2>
                   </div>
                   
                   <div className="space-y-6">
@@ -70,22 +70,22 @@ export default function SkillsPage() {
               <div className="p-3 w-fit rounded-2xl bg-white/10 mb-6">
                 <Brain size={32} />
               </div>
-              <h2 className="text-2xl font-bold mb-4">Methodologies & Design</h2>
+              <h2 className="text-2xl font-bold mb-4">Metodologi & Tata Kelola</h2>
               <p className="text-primary-foreground/80 mb-8">
-                Beyond specific tools, I focus on core engineering principles that allow me to build adaptable and maintainable software.
+                Prinsip operasional untuk layanan pemerintah yang handal dan data yang dapat dipercaya.
               </p>
               
               <div className="space-y-4">
                 {[
-                  "Domain Driven Design (DDD)",
-                  "Test Driven Development (TDD)",
-                  "Microservices Architecture",
-                  "Event Driven Systems",
-                  "SOLID & Clean Code Principles",
-                  "Agile & Scrum Methodologies"
+                  "Satu Data Indonesia (SDI)",
+                  "Manajemen Keamanan Informasi",
+                  "High Availability & Backup Strategy",
+                  "Network Segmentation & Firewall Policy",
+                  "Virtualization & Containerization",
+                  "Monitoring & Preventive Maintenance"
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-3">
-                    <Sparkles size={16} className="text-primary-foreground/60" />
+                    <ShieldCheck size={16} className="text-primary-foreground/60" />
                     <span className="font-medium">{item}</span>
                   </div>
                 ))}
@@ -93,9 +93,9 @@ export default function SkillsPage() {
             </Card>
 
             <Card className="p-8 rounded-[2rem] bg-accent/30 border-none shadow-none" hover={false}>
-              <h3 className="text-xl font-bold mb-6">Soft Skills</h3>
+              <h3 className="text-xl font-bold mb-6">Tanggung Jawab</h3>
               <div className="flex flex-wrap gap-2">
-                {["Team Leadership", "Technical Writing", "Mentoring", "Problem Solving", "Strategic Planning", "Project Management"].map(skill => (
+                {["System Stability", "Data Collection & Validation", "Data Publication", "Infrastructure Maintenance", "Network Security", "Public Service Continuity"].map(skill => (
                   <span key={skill} className="px-4 py-2 rounded-xl bg-background border border-border text-sm font-medium">
                     {skill}
                   </span>
@@ -107,9 +107,9 @@ export default function SkillsPage() {
       </Section>
 
       <Section className="mt-12 text-center">
-        <h3 className="text-xl font-bold mb-4">Wanna see these skills in action?</h3>
+        <h3 className="text-xl font-bold mb-4">Lihat implementasi di portal Pemkab Pacitan</h3>
         <Link href="/projects">
-          <Button variant="outline">Browse Case Studies</Button>
+          <Button variant="outline">Lihat Website Kelolaan</Button>
         </Link>
       </Section>
     </div>

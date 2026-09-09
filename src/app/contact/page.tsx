@@ -10,16 +10,16 @@ export default function ContactPage() {
     <div className="pb-20">
       <Section className="md:pt-16">
         <SectionHeader 
-          title="Let's Start a Conversation" 
-          subtitle="Interested in working together or just want to chat about engineering? Reach out via the form or through social channels."
+          title="Mari Terhubung" 
+          subtitle="Tertarik berkolaborasi terkait infrastruktur, jaringan, atau pengelolaan data Pemkab Pacitan? Hubungi melalui form atau kanal berikut."
         />
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-5 space-y-8">
             <div className="space-y-6">
-              <h2 className="text-2xl font-bold">Connect With Me</h2>
+              <h2 className="text-2xl font-bold">Hubungi Saya</h2>
               <p className="text-muted-foreground max-w-sm">
-                I'm active on these platforms and usually respond within 24-48 hours. Let's build something extraordinary.
+                System Engineer & Data Analyst Pemkab Pacitan. Terbuka untuk diskusi infrastruktur, keamanan jaringan, dan tata kelola data.
               </p>
             </div>
             
@@ -51,10 +51,10 @@ export default function ContactPage() {
             <Card className="bg-primary text-primary-foreground p-8 rounded-[2rem] border-none shadow-xl shadow-primary/20" hover={false}>
               <div className="flex items-center gap-4 mb-4">
                 <MapPin size={24} className="text-primary-foreground/60" />
-                <h3 className="text-lg font-bold">Location</h3>
+                <h3 className="text-lg font-bold">Lokasi</h3>
               </div>
               <p className="text-primary-foreground/80">
-                Operating remotely from Indonesia. Open to global collaborations and remote-first opportunities.
+                Pemerintah Kabupaten Pacitan, Jawa Timur — Indonesia. Mengelola infrastruktur server & jaringan dan publikasi data daerah.
               </p>
             </Card>
           </div>

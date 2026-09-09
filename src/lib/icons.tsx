@@ -15,7 +15,12 @@ import {
   SiOpenai,
   SiSocketdotio,
   SiExpress,
-  SiRedis
+  SiRedis,
+  SiLinux,
+  SiProxmox,
+  SiNginx,
+  SiMikrotik,
+  SiFortinet
 } from 'react-icons/si';
 import { IconType } from 'react-icons';
 
@@ -38,6 +43,18 @@ export const iconMap: Record<string, IconType> = {
   'Socket.io': SiSocketdotio,
   'Express': SiExpress,
   'Redis': SiRedis,
+  // System Engineer & Data Analyst - Pemkab Pacitan
+  'Linux': SiLinux,
+  'Linux Server Administration': SiLinux,
+  'Proxmox': SiProxmox,
+  'Proxmox VE': SiProxmox,
+  'Docker Engine': SiDocker,
+  'Nginx': SiNginx,
+  'Mikrotik': SiMikrotik,
+  'Fortigate': SiFortinet,
+  'Fortinet': SiFortinet,
+  'Virtualization': SiProxmox,
+  'Network Management': SiMikrotik,
 };
 
 export function getIcon(name: string) {

@@ -18,7 +18,7 @@ export function Footer() {
               PORTFOLIO<span className="text-primary-foreground bg-primary px-1 ml-1 rounded">.</span>
             </Link>
             <p className="text-sm text-muted-foreground text-center md:text-left max-w-xs">
-              Building robust systems and beautiful interfaces. Focused on performance, design, and user experience.
+              System Engineer & Data Analyst Pemkab Pacitan — menjaga stabilitas sistem dan mempublikasikan data untuk kebijakan berbasis data.
             </p>
           </div>
           
@@ -38,7 +38,7 @@ export function Footer() {
               ))}
             </div>
             <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} Programmer Portfolio. All rights reserved.
+              © {new Date().getFullYear()} Purwanto — Pemkab Pacitan. All rights reserved.
             </p>
           </div>
         </div>

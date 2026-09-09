@@ -10,8 +10,8 @@ export default function BlogPage() {
     <div className="pb-20">
       <Section className="md:pt-16">
         <SectionHeader 
-          title="Technical Thoughts" 
-          subtitle="A collection of articles covering system design, engineering practices, and technical decision making."
+          title="Catatan Teknis" 
+          subtitle="Artikel tentang infrastruktur, keamanan jaringan, dan tata kelola data di lingkungan Pemkab Pacitan."
         />
         
         <div className="max-w-4xl mx-auto space-y-8">

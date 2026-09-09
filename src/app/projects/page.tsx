@@ -13,8 +13,8 @@ export default function ProjectsPage() {
     <div className="pb-20">
       <Section className="md:pt-16">
         <SectionHeader 
-          title="Engineering Portfolio" 
-          subtitle="A collection of systems and applications I've built, focusing on architecture, performance, and user experience."
+          title="Website & Infrastruktur Kelolaan" 
+          subtitle="Portal strategis dan infrastruktur yang saya kelola di Pemkab Pacitan untuk layanan publik dan keterbukaan data."
         />
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -69,12 +69,12 @@ export default function ProjectsPage() {
 
       <Section className="bg-primary/5 rounded-[3rem]">
         <div className="text-center py-8">
-          <h2 className="text-2xl font-bold mb-4">Interested in the tech stack?</h2>
+          <h2 className="text-2xl font-bold mb-4">Penasaran dengan stack yang digunakan?</h2>
           <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
-            Every project is built with specific tools and architectural decisions. Check out my skills page for a detailed look at my expertise.
+            Setiap portal berjalan di atas Linux, Proxmox VE, dan Docker Engine dengan pengamanan Mikrotik & Fortigate. Lihat detail keahlian di halaman skills.
           </p>
           <Link href="/skills">
-            <Button variant="outline">Explore My Skills</Button>
+            <Button variant="outline">Lihat Keahlian</Button>
           </Link>
         </div>
       </Section>
