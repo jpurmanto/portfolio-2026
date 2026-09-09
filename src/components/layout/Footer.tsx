@@ -38,7 +38,7 @@ export function Footer() {
               ))}
             </div>
             <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} Purwanto — Pemkab Pacitan. All rights reserved.
+              © {new Date().getFullYear()} Purmanto — Pemkab Pacitan. All rights reserved.
             </p>
           </div>
         </div>

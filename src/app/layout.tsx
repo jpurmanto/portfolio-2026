@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Purwanto | System Engineer & Data Analyst - Pemkab Pacitan",
+  title: "Purmanto | System Engineer & Data Analyst - Pemkab Pacitan",
   description: "System Engineer & Data Analyst di Pemkab Pacitan. Merancang, membangun, dan memelihara sistem IT serta mengelola dan mempublikasikan data Kabupaten Pacitan. Keahlian: Linux, Proxmox VE, Docker, Mikrotik, Fortigate. Pengelola pacitankab.go.id, data, opendata, geoportal, dataviz.",
 };
 
