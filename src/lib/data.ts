@@ -52,6 +52,16 @@ export const projects: Project[] = [
     liveUrl: 'https://dataviz.pacitankab.go.id',
   },
   {
+    slug: 'masjid-al-falaq-kriyan',
+    title: 'Masjid Al-Falaq Kriyan',
+    description: 'Website resmi Masjid Al-Falaq Kriyan Sidoharjo Pacitan dengan jadwal shalat, tadabbur harian, kajian, laporan infaq transparan, dan kontak taqmir.',
+    longDescription: 'Mengelola website Masjid Al-Falaq Kriyan Sidoharjo Pacitan berbasis Next.js. Fitur meliputi jadwal shalat harian, tadabbur satu ayat, publikasi kajian via WordPress, laporan infaq mengikuti Google Sheet bendahara, integrasi YouTube kajian, serta kontak taqmir dan nomor penting.',
+    featured: true,
+    tags: ['Next.js', 'Linux', 'Nginx', 'Docker'],
+    image: '/projects/masjid-al-falaq.png',
+    liveUrl: 'https://masjidalfalaq.pacitankab.web.id/',
+  },
+  {
     slug: 'infrastruktur-jaringan-pemkab',
     title: 'Infrastruktur & Keamanan Jaringan Pemkab',
     description: 'Perancangan, pembangunan, dan pemeliharaan infrastruktur server, virtualisasi, dan keamanan jaringan di lingkungan Pemkab Pacitan.',
