@@ -61,14 +61,6 @@ export const projects: Project[] = [
     image: '/projects/masjid-al-falaq.png',
     liveUrl: 'https://masjidalfalaq.pacitankab.web.id/',
   },
-  {
-    slug: 'infrastruktur-jaringan-pemkab',
-    title: 'Infrastruktur & Keamanan Jaringan Pemkab',
-    description: 'Perancangan, pembangunan, dan pemeliharaan infrastruktur server, virtualisasi, dan keamanan jaringan di lingkungan Pemkab Pacitan.',
-    featured: false,
-    tags: ['Proxmox', 'Mikrotik', 'Fortigate', 'Linux'],
-    image: '/projects/infra.png',
-  },
 ];
 
 export const skills: Skill[] = [
